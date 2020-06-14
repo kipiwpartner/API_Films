@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:actionMenuTextColor="@color/colorAccent"
+    android:itemTextAppearance="@color/colorAccent">
+
+    <item
+        android:id="@+id/ajouter"
+        android:title="@string/item_ajouter"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_add_to_photos_black_24dp"
+        android:titleCondensed="@string/title_menu"
+        />
+
+    <item
+        android:id="@+id/lister"
+        android:title="@string/item_lister"  />
+
+    <item
+        android:id="@+id/categorie"
+        android:title="Catégorie"  />
+
+    <item
+        android:id="@+id/total"
+        android:title="Total"  />
+
+
+</menu>
