@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">API Films</string>
-    <string name="title_activity_enlever">EnleverActivity</string>
+    <string name="app_name">Android_Films</string>
     <string name="title_menu">Films:</string>
     <string name="item_lister">Lister</string>
     <string name="item_ajouter">Ajouter</string>

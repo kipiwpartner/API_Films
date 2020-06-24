@@ -6,16 +6,24 @@
     android:itemTextAppearance="@color/colorAccent">
 
     <item
-        android:id="@+id/ajouter"
+        android:id="@+id/main_activity"
         android:title="@string/item_ajouter"
         app:showAsAction="always"
-        android:icon="@drawable/ic_add_to_photos_black_24dp"
+        android:icon="@drawable/ic_home_white_36dp"
         android:titleCondensed="@string/title_menu"
         />
 
     <item
         android:id="@+id/lister"
         android:title="@string/item_lister"  />
+
+    <item
+        android:id="@+id/modifier"
+        android:title="Modifier"  />
+
+    <item
+        android:id="@+id/enregistrer"
+        android:title="Enregistrer"  />
 
     <item
         android:id="@+id/categorie"
