@@ -5,8 +5,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
@@ -26,6 +29,8 @@ import java.util.Map;
 public class EnregistrerActivity extends MainActivity implements View.OnClickListener{
 
     Button benreg;
+    Spinner spinner1;
+    String category = "1";
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -43,10 +48,50 @@ public class EnregistrerActivity extends MainActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enregistrer);
 
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.table_category,
+                R.layout.my_spinner);
+
+        //link the adapter to the spinner
+        spinner1 = (Spinner) findViewById(R.id.spinner1);
+        spinner1.setAdapter(adapter);
+
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         ajouterEvents();
+
+        spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                switch (position){
+
+                    case 0:
+                        category = "1";
+                        break;
+                    case 1:
+                        category = "2";
+                        break;
+                    case 2:
+                        category = "3";
+                        break;
+                    case 3:
+                        category = "4";
+                        break;
+                    case 4:
+                        category = "5";
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     public void onClick(View v) {
@@ -109,6 +154,7 @@ public class EnregistrerActivity extends MainActivity implements View.OnClickLis
                 params.put("youtube", youtube);
                 params.put("prix", prix);
                 params.put("duree", duree);
+                params.put("id_category", category);
                 return params;
             }
         };

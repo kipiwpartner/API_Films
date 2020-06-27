@@ -47,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
                 this.finish();
                 startActivity(intent_main);
                 break;
+            case R.id.enlever:
+                Intent intent_enlever = new Intent(this, EnleverActivity.class);
+                this.finish();
+                startActivity(intent_enlever);
+                break;
         }
 
         return true;

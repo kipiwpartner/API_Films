@@ -35,6 +35,10 @@ public class BaseActivity extends Activity{
                 Intent intent_main = new Intent(this, MainActivity.class);
                 startActivity(intent_main);
                 return true;
+            case R.id.enlever:
+                Intent intent_enlever = new Intent(this, EnleverActivity.class);
+                startActivity(intent_enlever);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

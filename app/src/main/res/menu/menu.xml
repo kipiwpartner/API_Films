@@ -26,8 +26,8 @@
         android:title="Enregistrer"  />
 
     <item
-        android:id="@+id/categorie"
-        android:title="Catégorie"  />
+        android:id="@+id/enlever"
+        android:title="Enlever"  />
 
     <item
         android:id="@+id/total"
